@@ -9,12 +9,12 @@
   <link rel="alternate" hreflang="en" href="https://egejpg.github.io/contact-exporter/privacy/">
   <link rel="alternate" hreflang="tr" href="https://egejpg.github.io/tr/contact-exporter/privacy/">
   <link rel="alternate" hreflang="x-default" href="https://egejpg.github.io/contact-exporter/privacy/">
-  <script>(function(){try{if(localStorage.getItem('lang')==='en'){var p=location.pathname;location.replace((p.indexOf('/tr/')===0?p.slice(3):'/')+location.search+location.hash)}}catch(e){}})();</script>
+  <script>(function(){var q=new URLSearchParams(location.search),p=q.get('lang'),s=null;if(p!=='en'&&p!=='tr')p=null;if(p){try{localStorage.setItem('lang',p)}catch(e){}q.delete('lang');var r=q.toString();try{history.replaceState(null,'',location.pathname+(r?'?'+r:'')+location.hash)}catch(e){}}try{s=localStorage.getItem('lang')}catch(e){}s=p||s;if(s==='en'){var x=location.pathname;location.replace((x.indexOf('/tr/')===0?x.slice(3):'/')+location.search+location.hash)}})();</script>
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=924374eb">
+  <script src="/assets/js/site.js?v=7b3d844b" defer></script>
 </head>
 <body>
   <a class="skip" href="#icerik">İçeriğe geç</a>
@@ -28,8 +28,8 @@
       <nav class="nav" aria-label="Ana menü">
         <a href="/tr/contact-exporter/"><span class="nav-text">Contact Exporter</span></a>
         <div class="lang" data-active="tr" role="group" aria-label="Dil">
-          <a class="lang-opt" href="/contact-exporter/privacy/" hreflang="en" lang="en" data-lang="en" title="English"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
-          <a class="lang-opt" href="/tr/contact-exporter/privacy/" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe" aria-current="true"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
+          <a class="lang-opt" href="/contact-exporter/privacy/?lang=en" hreflang="en" lang="en" data-lang="en" title="English"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
+          <a class="lang-opt" href="/tr/contact-exporter/privacy/?lang=tr" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe" aria-current="true"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
         </div>
       </nav>
     </div>

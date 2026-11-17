@@ -7,8 +7,8 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=924374eb">
+  <script src="/assets/js/site.js?v=7b3d844b" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -35,6 +35,11 @@
     </div>
   </main>
   <script>
+    // /en ya da /en/... yazıldıysa aynı sayfanın İngilizcesine git.
+    (function () {
+      var x = location.pathname;
+      if (x === '/en' || x.indexOf('/en/') === 0) location.replace((x.slice(3) || '/') + '?lang=en' + location.hash);
+    })();
     // /tr/ altındaki adreslerde ya da Türkçe tercih kayıtlıysa Türkçe göster.
     (function () {
       var saved = null;

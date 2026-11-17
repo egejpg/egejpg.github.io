@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="en" href="https://egejpg.github.io/">
   <link rel="alternate" hreflang="tr" href="https://egejpg.github.io/tr/">
   <link rel="alternate" hreflang="x-default" href="https://egejpg.github.io/">
-  <script>(function(){var s=null;try{s=localStorage.getItem('lang')}catch(e){}if(s==='en')return;var tr=s==='tr';if(!tr){try{var z=Intl.DateTimeFormat().resolvedOptions().timeZone;tr=z==='Europe/Istanbul'||z==='Asia/Istanbul'}catch(e){}}if(tr)location.replace('/tr'+location.pathname+location.search+location.hash)})();</script>
+  <script>(function(){var q=new URLSearchParams(location.search),p=q.get('lang'),s=null;if(p!=='en'&&p!=='tr')p=null;if(p){try{localStorage.setItem('lang',p)}catch(e){}q.delete('lang');var r=q.toString();try{history.replaceState(null,'',location.pathname+(r?'?'+r:'')+location.hash)}catch(e){}}try{s=localStorage.getItem('lang')}catch(e){}s=p||s;if(s==='en')return;var tr=s==='tr';if(!tr){try{var z=Intl.DateTimeFormat().resolvedOptions().timeZone;tr=z==='Europe/Istanbul'||z==='Asia/Istanbul'}catch(e){}}if(tr)location.replace('/tr'+location.pathname+location.search+location.hash)})();</script>
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="egejpg">
@@ -20,8 +20,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=924374eb">
+  <script src="/assets/js/site.js?v=7b3d844b" defer></script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
@@ -40,8 +40,8 @@
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         </a>
         <div class="lang" data-active="en" role="group" aria-label="Language">
-          <a class="lang-opt" href="/" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
-          <a class="lang-opt" href="/tr/" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
+          <a class="lang-opt" href="/?lang=en" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
+          <a class="lang-opt" href="/tr/?lang=tr" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
         </div>
       </nav>
     </div>

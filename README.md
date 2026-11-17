@@ -22,12 +22,17 @@ assets/img/<eklenti>/                 Eklenti görselleri
 ## Dil seçimi
 
 - İlk ziyarette cihazın saat dilimi Türkiye ise (`Europe/Istanbul`) İngilizce sayfa Türkçe karşılığına yönlenir. IP'den konum bulunmaz, izin istenmez, hiçbir yere veri gitmez.
-- Sağ üstteki bayraklarla seçilen dil tarayıcıda (`localStorage`) hatırlanır ve otomatik geçişin yerine geçer.
+- Sağ üstteki bayraklar `?lang=en` / `?lang=tr` ekiyle bağlanır; sayfanın başındaki betik seçimi kaydeder (`localStorage`) ve eki adresten siler. JavaScript dosyası yüklenmese bile çalışır. Kayıtlı seçim otomatik geçişin yerine geçer.
+- `/en` ve `/en/...` adresleri (404 sayfası üzerinden) aynı sayfanın İngilizcesine yönlenir.
 - Her sayfanın `<head>` kısmında iki dildeki karşılığına `hreflang` bağlantıları var; arama motorları doğru dili gösterir.
 
 ## E-posta
 
 Adres sayfa kaynağında düz yazılmaz: `data-u` / `data-d` öznitelikleri ters çevrilmiş parçaları tutar, `site.js` bağlantıyı tıklanabilir hale getirir.
+
+## CSS/JS değiştirince
+
+`node tools/stamp.mjs` çalıştır. Sayfalardaki `site.css` ve `site.js` adreslerine içerik özetinden bir sürüm etiketi (`?v=…`) yazar; böylece ziyaretçiler eski kopyayı önbellekten kullanamaz (GitHub Pages dosyaları 10 dakika önbellekte tutar).
 
 ## Yerelde çalıştırma
 
