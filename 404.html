@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="tr" class="no-js">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sayfa bulunamadı · egejpg</title>
+  <title>Page not found · egejpg</title>
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="wordmark" href="/" aria-label="egejpg ana sayfa">
+      <a class="wordmark" href="/" data-home aria-label="egejpg">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0b8457"/><path d="M9.5 16h13a6.5 6.5 0 1 0-1.9 4.6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="4.5" width="4.5" height="4.5" rx="1.2" fill="#d4f46a"/></svg>
         <span class="wm">ege<b>jpg</b></span>
       </a>
@@ -24,9 +24,29 @@
       <span class="floater" style="--x:8%;--y:12%;--depth:18;" aria-hidden="true"><span class="floater-in" style="--dur:9s">.vcf</span></span>
       <span class="floater" style="--x:76%;--y:78%;--depth:-16;" aria-hidden="true"><span class="floater-in lime" style="--dur:11s;--delay:-3s">.csv</span></span>
       <div class="big">404</div>
-      <p>Bu sayfa yüzüp gitmiş. Belki adres değişti, belki hiç olmadı.</p>
-      <a class="btn btn-primary" href="/">Ana sayfaya dön</a>
+      <div data-l="en">
+        <p>This page has floated away. Maybe the address changed, maybe it never existed.</p>
+        <a class="btn btn-primary" href="/">Back to home</a>
+      </div>
+      <div data-l="tr" hidden>
+        <p>Bu sayfa yüzüp gitmiş. Belki adres değişti, belki hiç olmadı.</p>
+        <a class="btn btn-primary" href="/tr/">Ana sayfaya dön</a>
+      </div>
     </div>
   </main>
+  <script>
+    // /tr/ altındaki adreslerde ya da Türkçe tercih kayıtlıysa Türkçe göster.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      var tr = location.pathname.indexOf('/tr/') === 0 || saved === 'tr';
+      if (!tr) return;
+      document.documentElement.lang = 'tr';
+      document.title = 'Sayfa bulunamadı · egejpg';
+      document.querySelector('[data-l="en"]').hidden = true;
+      document.querySelector('[data-l="tr"]').hidden = false;
+      document.querySelector('[data-home]').setAttribute('href', '/tr/');
+    })();
+  </script>
 </body>
 </html>

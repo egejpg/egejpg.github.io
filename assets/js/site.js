@@ -23,6 +23,20 @@
     if (a.hasAttribute('data-show')) a.textContent = addr;
   });
 
+  // ---------- Dil seçici ----------
+  // Seçim hatırlanır; böylece otomatik (saat dilimine göre) geçiş bir daha devreye girmez.
+  document.querySelectorAll('.lang-opt').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      try { localStorage.setItem('lang', a.dataset.lang); } catch { /* depolama kapalı */ }
+      e.preventDefault();
+      if (a.getAttribute('aria-current') === 'true') return;
+      a.closest('.lang').dataset.active = a.dataset.lang;
+      const go = () => { location.href = a.getAttribute('href'); };
+      reduceMotion ? go() : setTimeout(go, 230);
+    });
+  });
+
   // ---------- Yıl ----------
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 

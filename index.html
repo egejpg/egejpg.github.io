@@ -1,16 +1,20 @@
 <!doctype html>
-<html lang="tr" class="no-js">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>egejpg · Dürüst tarayıcı eklentileri</title>
-  <meta name="description" content="Veri toplamayan, az izin isteyen, açık kaynak Chrome eklentileri. Contact Exporter for WA Web ve sıradakiler.">
+  <title>egejpg · Honest browser extensions</title>
+  <meta name="description" content="Open-source Chrome extensions that collect no data and ask for as few permissions as possible. Contact Exporter for WA Web and more to come.">
   <link rel="canonical" href="https://egejpg.github.io/">
+  <link rel="alternate" hreflang="en" href="https://egejpg.github.io/">
+  <link rel="alternate" hreflang="tr" href="https://egejpg.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://egejpg.github.io/">
+  <script>(function(){var s=null;try{s=localStorage.getItem('lang')}catch(e){}if(s==='en')return;var tr=s==='tr';if(!tr){try{var z=Intl.DateTimeFormat().resolvedOptions().timeZone;tr=z==='Europe/Istanbul'||z==='Asia/Istanbul'}catch(e){}}if(tr)location.replace('/tr'+location.pathname+location.search+location.hash)})();</script>
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="egejpg">
-  <meta property="og:title" content="egejpg · Dürüst tarayıcı eklentileri">
-  <meta property="og:description" content="Veri toplamayan, az izin isteyen, açık kaynak Chrome eklentileri.">
+  <meta property="og:title" content="egejpg · Honest browser extensions">
+  <meta property="og:description" content="Open-source Chrome extensions that collect no data and ask for as few permissions as possible.">
   <meta property="og:url" content="https://egejpg.github.io/">
   <meta property="og:image" content="https://egejpg.github.io/assets/img/contact-exporter/ana.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,41 +24,45 @@
   <script src="/assets/js/site.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <a class="skip" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container">
-      <a class="wordmark" href="/" aria-label="egejpg ana sayfa">
+      <a class="wordmark" href="/" aria-label="egejpg home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0b8457"/><path d="M9.5 16h13a6.5 6.5 0 1 0-1.9 4.6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="4.5" width="4.5" height="4.5" rx="1.2" fill="#d4f46a"/></svg>
         <span class="wm">ege<b>jpg</b></span>
       </a>
-      <nav class="nav" aria-label="Ana menü">
-        <a href="#eklentiler"><span class="nav-text">Eklentiler</span></a>
-        <a href="#ilkeler"><span class="nav-text">İlkeler</span></a>
-        <a href="#iletisim"><span class="nav-text">İletişim</span></a>
+      <nav class="nav" aria-label="Main menu">
+        <a href="#extensions"><span class="nav-text">Extensions</span></a>
+        <a href="#principles"><span class="nav-text">Principles</span></a>
+        <a href="#contact"><span class="nav-text">Contact</span></a>
         <a class="nav-icon" href="https://github.com/egejpg" aria-label="GitHub">
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         </a>
+        <div class="lang" data-active="en" role="group" aria-label="Language">
+          <a class="lang-opt" href="/" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
+          <a class="lang-opt" href="/tr/" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main id="icerik">
+  <main id="content">
     <section class="hero container">
-      <p class="eyebrow reveal"><span class="dot"></span> Açık kaynak Chrome eklentileri</p>
-      <h1 class="reveal" style="--d:.08s">Küçük işler için <mark class="hl">dürüst</mark> eklentiler.</h1>
-      <p class="lead reveal" style="--d:.16s">Veri toplamayan, az izin isteyen, kodu herkese açık eklentiler. Birini seç, yakından bak.</p>
+      <p class="eyebrow reveal"><span class="dot"></span> Open-source Chrome extensions</p>
+      <h1 class="reveal" style="--d:.08s">Honest extensions for <mark class="hl">small</mark> jobs.</h1>
+      <p class="lead reveal" style="--d:.16s">No data collection, minimal permissions, source code anyone can read. Pick one and take a closer look.</p>
     </section>
 
-    <section id="eklentiler" class="container reveal" style="--d:.22s" aria-label="Eklentiler">
+    <section id="extensions" class="container reveal" style="--d:.22s" aria-label="Extensions">
       <div id="ext-carousel" class="stage home-stage carousel" data-carousel data-parallax tabindex="0">
         <span class="floater" style="--x:5%;--y:4%;--depth:22;" aria-hidden="true"><span class="floater-in" style="--dur:9s">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>VCF</span></span>
-        <span class="floater hide-sm" style="--x:84%;--y:5%;--depth:-18;" aria-hidden="true"><span class="floater-in lime" style="--dur:11s;--delay:-3s">0 sunucu</span></span>
+        <span class="floater hide-sm" style="--x:84%;--y:5%;--depth:-18;" aria-hidden="true"><span class="floater-in lime" style="--dur:11s;--delay:-3s">0 servers</span></span>
         <span class="floater hide-sm" style="--x:3%;--y:88%;--depth:-14;" aria-hidden="true"><span class="floater-in green" style="--dur:10s;--delay:-6s">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>Açık kaynak</span></span>
-        <span class="floater" style="--x:86%;--y:89%;--depth:20;" aria-hidden="true"><span class="floater-in" style="--dur:8s;--delay:-2s">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>2 izin</span></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>Open source</span></span>
+        <span class="floater" style="--x:84%;--y:89%;--depth:20;" aria-hidden="true"><span class="floater-in" style="--dur:8s;--delay:-2s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>2 permissions</span></span>
 
         <div class="carousel-track">
           <!-- 1. Contact Exporter -->
@@ -64,19 +72,19 @@
                 <div class="ext-body">
                   <div class="ext-top">
                     <img class="ext-icon" src="/assets/img/contact-exporter/icon.png" alt="" width="56" height="56">
-                    <div class="ext-tags"><span class="tag tag-lime">Yeni</span><span class="tag">Chrome</span><span class="tag">Ücretsiz</span></div>
+                    <div class="ext-tags"><span class="tag tag-lime">New</span><span class="tag">Chrome</span><span class="tag">Free</span></div>
                   </div>
                   <h2>Contact Exporter for WA Web</h2>
-                  <p>WhatsApp Web'de kayıtlı kişilerini tek tıkla VCF ve CSV olarak dışa aktar. Telefon değiştirirken rehberin kaybolmasın.</p>
+                  <p>Export the saved contacts you see in WhatsApp Web to VCF and CSV in one click. Don't lose your address book when you switch phones.</p>
                   <ul class="checks">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Telefon için VCF, Excel için CSV</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Veriler bilgisayarından çıkmaz</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Yalnızca 2 izin, sıfır takip</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>VCF for your phone, CSV for Excel</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Your data never leaves your computer</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Just 2 permissions, zero tracking</li>
                   </ul>
                   <div class="ext-actions">
-                    <a class="btn btn-primary" href="/contact-exporter/">İncele
+                    <a class="btn btn-primary" href="/contact-exporter/">Take a look
                       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                    <a class="btn btn-ghost" href="https://github.com/egejpg/contact-exporter-wa-web">Kaynak kod</a>
+                    <a class="btn btn-ghost" href="https://github.com/egejpg/contact-exporter-wa-web">Source code</a>
                   </div>
                 </div>
                 <div class="ext-visual" aria-hidden="true">
@@ -88,40 +96,40 @@
                         <div class="mp-search">İsim veya numara ara</div>
                         <ul class="mp-list">
                           <li><i></i><span>Ahmet Kılıç</span><em>+905322892372</em></li>
-                          <li><i></i><span>Akın Erdem</span><em>+905428371709</em></li>
+                          <li><i></i><span>Emma Brown</span><em>+447700900123</em></li>
                           <li class="off"><i></i><span>Ali Tekin</span><em>+905355327143</em></li>
-                          <li><i></i><span>Alper Yıldız</span><em>+905427550748</em></li>
-                          <li><i></i><span>Anıl Şahin</span><em>+905076437542</em></li>
+                          <li><i></i><span>Hans Müller</span><em>+4915123456789</em></li>
+                          <li><i></i><span>John Smith</span><em>+12025550123</em></li>
                         </ul>
                         <div class="mp-actions"><span class="o">CSV indir</span><span class="f">Telefona aktar (VCF)</span></div>
                       </div>
                     </div>
                   </div>
                   <div class="toast-pos depth-2">
-                    <div class="mock-toast"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>95 kişi hazır</b><small>contacts.vcf</small></div></div>
+                    <div class="mock-toast"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>95 contacts ready</b><small>contacts.vcf</small></div></div>
                   </div>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- 2. Sıradaki -->
-          <article class="slide" data-title="Sıradaki eklenti">
+          <!-- 2. Next -->
+          <article class="slide" data-title="Next extension">
             <div class="slide-float">
               <div class="slide-card ext-card">
                 <div class="ext-body">
                   <div class="ext-top">
                     <span class="ext-icon placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
-                    <div class="ext-tags"><span class="tag">Yapım aşamasında</span></div>
+                    <div class="ext-tags"><span class="tag">In progress</span></div>
                   </div>
-                  <h2>Sıradaki eklenti yolda</h2>
-                  <p>Üzerinde çalıştığım yeni bir araç var. Aynı ilkelerle gelecek: veri toplamadan, az izinle, kodu açık.</p>
+                  <h2>The next one is on its way</h2>
+                  <p>I'm working on a new tool. It will follow the same rules: no data collection, minimal permissions, open source.</p>
                   <ul class="checks">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Çıkınca ilk burada görünür</li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>GitHub'dan takip edebilirsin</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>It shows up here first</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Follow along on GitHub</li>
                   </ul>
                   <div class="ext-actions">
-                    <a class="btn btn-ghost" href="https://github.com/egejpg">GitHub'da takip et
+                    <a class="btn btn-ghost" href="https://github.com/egejpg">Follow on GitHub
                       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   </div>
                 </div>
@@ -136,26 +144,26 @@
             </div>
           </article>
 
-          <!-- 3. Fikir -->
-          <article class="slide" data-title="Fikrini yaz">
+          <!-- 3. Idea -->
+          <article class="slide" data-title="Share an idea">
             <div class="slide-float">
               <div class="slide-card ext-card">
                 <div class="ext-body">
                   <div class="ext-top">
                     <span class="ext-icon placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg></span>
-                    <div class="ext-tags"><span class="tag">Senden</span></div>
+                    <div class="ext-tags"><span class="tag">From you</span></div>
                   </div>
-                  <h2>Bir fikrin mi var?</h2>
-                  <p>Tarayıcıda her gün tekrar ettiğin, seni yoran bir iş varsa yaz. Sıradaki eklenti o olabilir.</p>
+                  <h2>Got an idea?</h2>
+                  <p>Is there something you repeat in your browser every day that drives you mad? Tell me. It might become the next extension.</p>
                   <div class="ext-actions">
-                    <a class="btn btn-primary" href="#" data-mail data-u="76lugreege" data-d="moc.liamg" data-s="Eklenti fikri">Fikrini yaz
+                    <a class="btn btn-primary" href="#" data-mail data-u="76lugreege" data-d="moc.liamg" data-s="Extension idea">Send your idea
                       <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                   </div>
                 </div>
                 <div class="ext-visual" aria-hidden="true">
                   <div class="bubbles depth">
-                    <p class="bubble">Her gün aynı tabloyu elle kopyalıyorum…</p>
-                    <p class="bubble">Bunu tek tıkla yapan bir eklenti olabilir.</p>
+                    <p class="bubble">I copy the same table by hand every single day…</p>
+                    <p class="bubble">That sounds like a one-click extension.</p>
                   </div>
                 </div>
               </div>
@@ -165,54 +173,54 @@
       </div>
 
       <div class="carousel-controls" data-controls="ext-carousel">
-        <button class="c-btn" type="button" data-prev aria-label="Önceki">
+        <button class="c-btn" type="button" data-prev aria-label="Previous">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
         <div class="c-dots"></div>
         <span class="c-count" aria-live="polite"></span>
-        <button class="c-btn" type="button" data-next aria-label="Sonraki">
+        <button class="c-btn" type="button" data-next aria-label="Next">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
 
-    <section id="ilkeler" class="section container">
+    <section id="principles" class="section container">
       <div class="section-head center reveal">
-        <span class="kicker">İlkeler</span>
-        <h2>Her eklenti aynı dört sözle gelir</h2>
-        <p>Tarayıcına kurduğun şey sayfalarını görebilir. Bu yüzden kurallar baştan belli.</p>
+        <span class="kicker">Principles</span>
+        <h2>Every extension makes the same four promises</h2>
+        <p>Anything you install in your browser can see your pages. So the rules are set from the start.</p>
       </div>
       <div class="grid-4">
         <article class="card reveal">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 18 18"/><path d="M17.5 17.5H7a4 4 0 0 1-.9-7.9M9.5 6.3A5.5 5.5 0 0 1 17.9 10a3.5 3.5 0 0 1 2.6 5"/></svg></div>
-          <h3>Veri toplamaz</h3>
-          <p>Sunucu yok, analiz yok, hesap yok. Ne yapıyorsa senin tarayıcında yapar.</p>
+          <h3>No data collection</h3>
+          <p>No servers, no analytics, no accounts. Everything happens inside your own browser.</p>
         </article>
         <article class="card reveal" style="--d:.08s">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3"/></svg></div>
-          <h3>En az izin</h3>
-          <p>Yalnızca işini yapmaya yetecek izni ister ve her birinin gerekçesini açıkça yazar.</p>
+          <h3>Minimal permissions</h3>
+          <p>Only what the job needs, with a plain explanation for every permission.</p>
         </article>
         <article class="card reveal" style="--d:.16s">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg></div>
-          <h3>Açık kaynak</h3>
-          <p>Kodun tamamı GitHub'da. Burada yazanları kendin doğrulayabilirsin.</p>
+          <h3>Open source</h3>
+          <p>All of the code is on GitHub, so you can check every claim on this page yourself.</p>
         </article>
         <article class="card reveal" style="--d:.24s">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div>
-          <h3>Sade ve Türkçe</h3>
-          <p>Tek bir işi iyi yapar. Arayüz Türkçe, kurulumu bir dakika.</p>
+          <h3>Simple by design</h3>
+          <p>Each one does a single job well. Setup takes about a minute.</p>
         </article>
       </div>
     </section>
 
-    <section id="iletisim" class="container">
+    <section id="contact" class="container">
       <div class="band reveal">
         <div>
-          <h2>Merhaba, ben Ege.</h2>
-          <p>Günlük işleri kısaltan küçük tarayıcı eklentileri yapıyorum. Bir hata bulduysan, bir fikrin varsa ya da sadece selam vermek istersen yaz.</p>
+          <h2>Hi, I'm Ege.</h2>
+          <p>I build small browser extensions that cut everyday chores short. Found a bug, have an idea, or just want to say hello? Drop me a line.</p>
         </div>
         <div class="actions">
           <a class="btn btn-primary" href="#" data-mail data-u="76lugreege" data-d="moc.liamg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>E-posta gönder</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>Send an email</a>
           <a class="btn btn-ghost" href="https://github.com/egejpg">GitHub</a>
         </div>
       </div>
@@ -221,19 +229,19 @@
 
   <footer class="site-footer">
     <div class="container">
-      <a class="wordmark" href="/" aria-label="egejpg ana sayfa">
+      <a class="wordmark" href="/" aria-label="egejpg home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0b8457"/><path d="M9.5 16h13a6.5 6.5 0 1 0-1.9 4.6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="4.5" width="4.5" height="4.5" rx="1.2" fill="#d4f46a"/></svg>
         <span class="wm">ege<b>jpg</b></span>
       </a>
-      <nav class="foot-links" aria-label="Alt menü">
+      <nav class="foot-links" aria-label="Footer menu">
         <a href="/contact-exporter/">Contact Exporter</a>
-        <a href="/contact-exporter/privacy/">Gizlilik</a>
+        <a href="/contact-exporter/privacy/">Privacy</a>
         <a href="https://github.com/egejpg">GitHub</a>
-        <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg">E-posta</a>
+        <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg">Email</a>
       </nav>
       <div class="foot-note">
         <span>© <span data-year>2026</span> egejpg</span>
-        <span class="leaf">Bu site çerez kullanmaz, ziyaretçi takibi yapmaz.</span>
+        <span class="leaf">This site uses no cookies and doesn't track visitors.</span>
       </div>
     </div>
   </footer>

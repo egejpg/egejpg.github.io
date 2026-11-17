@@ -1,16 +1,20 @@
 <!doctype html>
-<html lang="tr" class="no-js">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Exporter for WA Web · WhatsApp Web kişilerini VCF ve CSV olarak aktar</title>
-  <meta name="description" content="WhatsApp Web'de kayıtlı kişilerini tek tıkla VCF (telefona aktarma) ve CSV (Excel) olarak dışa aktaran ücretsiz, açık kaynak Chrome eklentisi. Veriler bilgisayarından çıkmaz.">
+  <title>Contact Exporter for WA Web · Export WhatsApp Web contacts to VCF and CSV</title>
+  <meta name="description" content="A free, open-source Chrome extension that exports the saved contacts in WhatsApp Web to VCF (for your phone) and CSV (for Excel). Your data never leaves your computer.">
   <link rel="canonical" href="https://egejpg.github.io/contact-exporter/">
+  <link rel="alternate" hreflang="en" href="https://egejpg.github.io/contact-exporter/">
+  <link rel="alternate" hreflang="tr" href="https://egejpg.github.io/tr/contact-exporter/">
+  <link rel="alternate" hreflang="x-default" href="https://egejpg.github.io/contact-exporter/">
+  <script>(function(){var s=null;try{s=localStorage.getItem('lang')}catch(e){}if(s==='en')return;var tr=s==='tr';if(!tr){try{var z=Intl.DateTimeFormat().resolvedOptions().timeZone;tr=z==='Europe/Istanbul'||z==='Asia/Istanbul'}catch(e){}}if(tr)location.replace('/tr'+location.pathname+location.search+location.hash)})();</script>
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="egejpg">
   <meta property="og:title" content="Contact Exporter for WA Web">
-  <meta property="og:description" content="Eski rehberini tek tıkla geri al. WhatsApp Web kişilerini VCF ve CSV olarak dışa aktar, veriler bilgisayarından çıkmaz.">
+  <meta property="og:description" content="Get your old address book back in one click. Export WhatsApp Web contacts to VCF and CSV. Your data never leaves your computer.">
   <meta property="og:url" content="https://egejpg.github.io/contact-exporter/">
   <meta property="og:image" content="https://egejpg.github.io/assets/img/contact-exporter/ana.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,52 +29,55 @@
     "name": "Contact Exporter for WA Web",
     "applicationCategory": "BrowserApplication",
     "operatingSystem": "Chrome",
-    "description": "WhatsApp Web'de kayıtlı kişileri VCF ve CSV olarak dışa aktaran, veri toplamayan Chrome eklentisi.",
+    "description": "A Chrome extension that exports saved WhatsApp Web contacts to VCF and CSV without collecting any data.",
     "url": "https://egejpg.github.io/contact-exporter/",
     "image": "https://egejpg.github.io/assets/img/contact-exporter/icon.png",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "author": { "@type": "Person", "name": "Ege", "url": "https://egejpg.github.io/" }
   }
   </script>
 </head>
 <body>
-  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <a class="skip" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container">
-      <a class="wordmark" href="/" aria-label="egejpg ana sayfa">
+      <a class="wordmark" href="/" aria-label="egejpg home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0b8457"/><path d="M9.5 16h13a6.5 6.5 0 1 0-1.9 4.6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="4.5" width="4.5" height="4.5" rx="1.2" fill="#d4f46a"/></svg>
         <span class="wm">ege<b>jpg</b></span>
       </a>
-      <nav class="nav" aria-label="Sayfa menüsü">
-        <a href="#nasil"><span class="nav-text">Nasıl çalışır</span></a>
-        <a href="#guven"><span class="nav-text">Gizlilik</span></a>
-        <a href="#sss"><span class="nav-text">SSS</span></a>
-        <a class="nav-icon" href="https://github.com/egejpg/contact-exporter-wa-web" aria-label="GitHub'da kaynak kod">
+      <nav class="nav" aria-label="Page menu">
+        <a href="#how"><span class="nav-text">How it works</span></a>
+        <a href="#privacy"><span class="nav-text">Privacy</span></a>
+        <a href="#faq"><span class="nav-text">FAQ</span></a>
+        <a class="nav-icon" href="https://github.com/egejpg/contact-exporter-wa-web" aria-label="Source code on GitHub">
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         </a>
+        <div class="lang" data-active="en" role="group" aria-label="Language">
+          <a class="lang-opt" href="/contact-exporter/" hreflang="en" lang="en" data-lang="en" title="English" aria-current="true"><span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="fl-uk-a"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="fl-uk-b"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#fl-uk-a)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#fl-uk-b)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span><span>EN</span></a>
+          <a class="lang-opt" href="/tr/contact-exporter/" hreflang="tr" lang="tr" data-lang="tr" title="Türkçe"><span class="flag"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="1200" height="800" fill="#E30A17"/><circle cx="425" cy="400" r="200" fill="#fff"/><circle cx="475" cy="400" r="160" fill="#E30A17"/><polygon fill="#fff" points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221"/></svg></span><span>TR</span></a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main id="icerik">
-    <!-- Giriş -->
+  <main id="content">
     <section class="container p-hero">
       <div>
-        <a class="back reveal" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Tüm eklentiler</a>
-        <div class="reveal" style="--d:.05s; margin-top:22px"><span class="eyebrow"><span class="dot"></span> WhatsApp Web ile çalışır</span></div>
-        <h1 class="reveal" style="--d:.1s">Eski rehberini tek tıkla <mark class="hl">geri al</mark>.</h1>
-        <p class="lead reveal" style="--d:.16s">Telefon değiştirdin ama rehberini aktarmayı unuttun mu? WhatsApp Web kişilerini hâlâ isimleriyle gösteriyorsa, onları dakikalar içinde yeni telefonuna taşı.</p>
+        <a class="back reveal" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All extensions</a>
+        <div class="reveal" style="--d:.05s; margin-top:22px"><span class="eyebrow"><span class="dot"></span> Works with WhatsApp Web</span></div>
+        <h1 class="reveal" style="--d:.1s">Get your old address book <mark class="hl">back</mark>.</h1>
+        <p class="lead reveal" style="--d:.16s">Switched phones and forgot to move your contacts? If WhatsApp Web still shows them by name, you can have them on your new phone in minutes.</p>
         <div class="actions reveal" style="--d:.22s">
-          <!-- Mağaza bağlantısı yayınlanınca: <a class="btn btn-primary" href="MAĞAZA_ADRESİ">Chrome'a ekle</a> -->
-          <span class="btn btn-soon" title="Chrome Web Store incelemesinde">Chrome Web Store'da yakında</span>
-          <a class="btn btn-primary" href="https://github.com/egejpg/contact-exporter-wa-web#kurulum">GitHub'dan kur
+          <!-- When the store listing is live: <a class="btn btn-primary" href="STORE_URL">Add to Chrome</a> -->
+          <span class="btn btn-soon" title="In Chrome Web Store review">Coming soon to the Chrome Web Store</span>
+          <a class="btn btn-primary" href="https://github.com/egejpg/contact-exporter-wa-web#kurulum">Install from GitHub
             <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
         <div class="meta reveal" style="--d:.28s">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Ücretsiz</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Açık kaynak</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Hesap gerekmez</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Free</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Open source</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>No account needed</span>
         </div>
       </div>
 
@@ -78,7 +85,7 @@
         <span class="floater" style="--x:7%;--y:9%;--depth:22;"><span class="floater-in" style="--dur:9s">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>VCF</span></span>
         <span class="floater" style="--x:76%;--y:7%;--depth:-18;"><span class="floater-in lime" style="--dur:11s;--delay:-4s">CSV</span></span>
-        <span class="floater hide-sm" style="--x:5%;--y:84%;--depth:-14;"><span class="floater-in green" style="--dur:10s;--delay:-6s">0 ağ isteği</span></span>
+        <span class="floater hide-sm" style="--x:5%;--y:84%;--depth:-14;"><span class="floater-in green" style="--dur:10s;--delay:-6s">0 network requests</span></span>
 
         <div class="stage-main depth">
           <div class="mock-popup">
@@ -87,144 +94,148 @@
               <div class="mp-count"><b>96</b> / 96 kişi seçili</div>
               <div class="mp-search">İsim veya numara ara</div>
               <ul class="mp-list">
-                <li><i></i><span>Ahmet Kılıç</span><em>+905322892372</em></li>
-                <li><i></i><span>Akın Erdem</span><em>+905428371709</em></li>
-                <li><i></i><span>Ali Tekin</span><em>+905355327143</em></li>
-                <li><i></i><span>Alper Yıldız</span><em>+905427550748</em></li>
-                <li><i></i><span>Anıl Şahin</span><em>+905076437542</em></li>
-                <li><i></i><span>Aras Kılıç</span><em>+905059083341</em></li>
+                <li><i></i><span>Ahmet Kılıç</span><em>+90 532 289 23 72</em></li>
+                <li><i></i><span>Emma Brown</span><em>+44 7700 900123</em></li>
+                <li><i></i><span>Hans Müller</span><em>+49 151 23456789</em></li>
+                <li><i></i><span>John Smith</span><em>+1 202 555 0123</em></li>
+                <li><i></i><span>Sophie Martin</span><em>+33 6 12 34 56 78</em></li>
+                <li><i></i><span>Elvin Məmmədov</span><em>+994 50 123 45 67</em></li>
               </ul>
               <div class="mp-actions"><span class="o">CSV indir</span><span class="f">Telefona aktar (VCF)</span></div>
             </div>
           </div>
         </div>
         <div class="stage-toast depth-2">
-          <div class="mock-toast"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>96 kişi içe aktarıldı</b><small>contacts.vcf · Telefon</small></div></div>
+          <div class="mock-toast"><span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><div><b>96 contacts imported</b><small>contacts.vcf · Phone</small></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Nasıl çalışır -->
-    <section id="nasil" class="section container">
+    <section id="how" class="section container">
       <div class="section-head center reveal">
-        <span class="kicker">Nasıl çalışır</span>
-        <h2>Üç adımda yeni telefonunda</h2>
-        <p>Kurulumdan sonra bir dakikadan kısa sürer.</p>
+        <span class="kicker">How it works</span>
+        <h2>On your new phone in three steps</h2>
+        <p>Once it's installed, it takes less than a minute.</p>
       </div>
       <div class="grid-3 steps">
         <article class="card step reveal">
           <span class="num">01</span>
-          <h3>WhatsApp Web'i aç</h3>
-          <p>web.whatsapp.com'a QR kodla giriş yap ve sohbetlerin yüklenmesini bekle.</p>
+          <h3>Open WhatsApp Web</h3>
+          <p>Sign in at web.whatsapp.com with the QR code and wait for your chats to load.</p>
         </article>
         <article class="card step reveal" style="--d:.08s">
           <span class="num">02</span>
-          <h3>Eklenti simgesine tıkla</h3>
-          <p>Kişilerin listelenir. Aramayla filtrele, istemediklerinin işaretini kaldır.</p>
+          <h3>Click the extension icon</h3>
+          <p>Your contacts are listed. Search, filter, and untick anyone you don't want.</p>
         </article>
         <article class="card step reveal" style="--d:.16s">
           <span class="num">03</span>
-          <h3>Dosyayı telefonunda aç</h3>
-          <p>VCF dosyasını kendine gönder ve aç. Tüm kişiler tek seferde rehberine eklenir.</p>
+          <h3>Open the file on your phone</h3>
+          <p>Send yourself the VCF file and open it. All contacts are added to your address book at once.</p>
         </article>
       </div>
     </section>
 
-    <!-- Ekran görüntüleri -->
-    <section class="container" aria-label="Ekran görüntüleri">
+    <section class="container" aria-label="Screenshots">
       <div id="shots" class="stage shots-stage carousel" data-carousel data-parallax tabindex="0">
         <div class="carousel-track">
-          <figure class="slide" style="margin:0" data-title="Telefona aktarma" data-caption="<b>VCF:</b> tek dosyayla tüm kişiler Android ve iPhone rehberine.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/telefon.png" alt="Eklenti listesi ve telefonda 96 kişinin içe aktarıldığını gösteren ekran" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+          <figure class="slide" style="margin:0" data-title="Move to your phone" data-caption="<b>VCF:</b> one file adds every contact to your Android or iPhone.">
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/telefon.png" alt="The extension's contact list next to a phone showing 96 contacts imported" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
-          <figure class="slide" style="margin:0" data-title="Excel" data-caption="<b>CSV:</b> Türkçe Excel'de sütunlar doğru ayrılır, numaralar bozulmaz.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/excel.png" alt="Excel'de Ad ve Telefon sütunlarıyla açılmış kişi listesi" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+          <figure class="slide" style="margin:0" data-title="Excel" data-caption="<b>CSV:</b> columns split correctly in Excel and phone numbers stay intact.">
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/excel.png" alt="Contact list opened in Excel with name and phone columns" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
-          <figure class="slide" style="margin:0" data-title="Gizlilik" data-caption="<b>Yerel:</b> sunucu yok, hesap yok, takip yok.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/gizlilik.png" alt="Verilerin bilgisayardan çıkmadığını anlatan üç kart" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+          <figure class="slide" style="margin:0" data-title="Privacy" data-caption="<b>Local:</b> no servers, no accounts, no tracking.">
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/gizlilik.png" alt="Three cards explaining that data never leaves the computer" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
         </div>
       </div>
       <p class="shot-caption" data-caption="shots" aria-live="polite"></p>
       <div class="carousel-controls" data-controls="shots" style="margin-top:14px">
-        <button class="c-btn" type="button" data-prev aria-label="Önceki görsel">
+        <button class="c-btn" type="button" data-prev aria-label="Previous image">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
         <div class="c-dots"></div>
         <span class="c-count"></span>
-        <button class="c-btn" type="button" data-next aria-label="Sonraki görsel">
+        <button class="c-btn" type="button" data-next aria-label="Next image">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
 
-    <!-- Güven -->
-    <section id="guven" class="section container">
+    <section id="privacy" class="section container">
       <div class="section-head center reveal">
-        <span class="kicker">Gizlilik</span>
-        <h2>Rehberin sende kalır</h2>
-        <p>Kişi listesi hassas bir veri. Eklenti onu yalnızca okur, dosyaya yazar ve unutur.</p>
+        <span class="kicker">Privacy</span>
+        <h2>Your address book stays with you</h2>
+        <p>A contact list is sensitive data. The extension only reads it, writes it to a file and forgets it.</p>
       </div>
       <div class="perm-grid">
         <div class="perm yes reveal">
-          <h3>İstediği izinler <span class="pill">2</span></h3>
+          <h3>Permissions it asks for <span class="pill">2</span></h3>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>
-              <div><b><code>activeTab</code></b><span>Yalnızca simgesine tıkladığın sekmeye, o an için erişir. Arka planda çalışmaz.</span></div></li>
+              <div><b><code>activeTab</code></b><span>Access only to the tab you click the icon on, only at that moment. It never runs in the background.</span></div></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>
-              <div><b><code>scripting</code></b><span>Kişi listesini okuyan küçük fonksiyonu o sekmede çalıştırmak için.</span></div></li>
+              <div><b><code>scripting</code></b><span>To run the small function that reads the contact list in that tab.</span></div></li>
           </ul>
         </div>
         <div class="perm no reveal" style="--d:.08s">
-          <h3>Dokunmadıkları <span class="pill">hiçbiri</span></h3>
+          <h3>What it never touches <span class="pill">none</span></h3>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
-              <div><b>Mesajlar ve medya</b><span>Sohbetleri okumaz, mesaj göndermez, WhatsApp'ta hiçbir şeyi değiştirmez.</span></div></li>
+              <div><b>Messages and media</b><span>It doesn't read chats, send messages, or change anything in WhatsApp.</span></div></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
-              <div><b>Sunucular</b><span>Kodda ağ isteği yapan tek bir satır yok. Kişi listen hiçbir yere gönderilmez.</span></div></li>
+              <div><b>Servers</b><span>There isn't a single line of code that makes a network request. Your contacts go nowhere.</span></div></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>
-              <div><b>Diğer siteler ve geçmiş</b><span>Tarama geçmişine ve başka sekmelere erişimi yok.</span></div></li>
+              <div><b>Other sites and history</b><span>No access to your browsing history or any other tab.</span></div></li>
           </ul>
         </div>
       </div>
       <a class="source-link reveal" href="https://github.com/egejpg/contact-exporter-wa-web/blob/main/extension/lib.js">
-        <span>Kendin kontrol et: tüm mantık tek dosyada, <code>extension/lib.js</code></span>
+        <span>Check it yourself: all of the logic is in one file, <code>extension/lib.js</code></span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </section>
 
-    <!-- SSS -->
-    <section id="sss" class="section container" style="padding-top:0">
+    <section id="faq" class="section container" style="padding-top:0">
       <div class="section-head center reveal">
-        <span class="kicker">SSS</span>
-        <h2>Sık sorulanlar</h2>
+        <span class="kicker">FAQ</span>
+        <h2>Frequently asked questions</h2>
       </div>
       <div class="faq">
         <details class="reveal">
-          <summary>VCF dosyasını iPhone'a nasıl aktarırım?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><ol><li>Dosyayı kendine e-postayla ya da AirDrop ile gönder.</li><li>iPhone'da dosyaya dokun, "Tüm Kişileri Ekle"yi seç.</li></ol></div>
+          <summary>How do I import the VCF file on an iPhone?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><ol><li>Email it to yourself or send it with AirDrop.</li><li>Tap the file on your iPhone and choose "Add All Contacts".</li></ol></div>
         </details>
         <details class="reveal">
-          <summary>Android'de nasıl açarım?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Dosyayı telefonuna gönder ve dokun; Kişiler uygulaması içe aktarmayı önerir. Açılmazsa Kişiler → Ayarlar → İçe aktar → .vcf dosyası yolunu kullan.</p></div>
+          <summary>And on Android?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>Send the file to your phone and tap it; the Contacts app offers to import it. If it doesn't, use Contacts → Settings → Import → .vcf file.</p></div>
         </details>
         <details class="reveal">
-          <summary>Google Kişiler'e aktarabilir miyim?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Evet. En kolayı VCF dosyasını contacts.google.com → İçe aktar ile yüklemek. CSV kullanacaksan "CSV'yi Excel'de açacağım" seçeneğini kapat.</p></div>
+          <summary>Can I import into Google Contacts?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>Yes. The easiest way is to upload the VCF file at contacts.google.com → Import. If you use the CSV instead, turn off the "I'll open the CSV in Excel" option.</p></div>
         </details>
         <details class="reveal">
-          <summary>Neden bazı kişiler listede yok?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Eklenti, WhatsApp Web'in bildiği kişileri alır: WhatsApp kullanan ve rehberinde kayıtlı olanlar. WhatsApp kullanmayan kişiler ve e-posta, ikinci numara gibi bilgiler WhatsApp'ta olmadığı için gelmez. Kaydetmediğin numaraları da istersen "Rehberde kayıtlı olmayanları da ekle" seçeneğiyle alabilirsin.</p></div>
+          <summary>Which phone number formats are supported?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>For CSV you can choose <code>+905321234567</code>, <code>+90 532 123 45 67</code>, the local format of more than 240 countries (for example <code>(202) 555-0123</code> in the US or <code>0151 23456789</code> in Germany), <code>00905321234567</code>, or digits only. VCF always uses the international format, so it works on every phone.</p></div>
         </details>
         <details class="reveal">
-          <summary>WhatsApp hesabım için güvenli mi?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Eklenti WhatsApp'a hiçbir istek göndermez, mesaj atmaz, otomatik işlem yapmaz. Yalnızca WhatsApp Web'in zaten tarayıcında sakladığı kişi listesini okur.</p></div>
+          <summary>Why are some contacts missing?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>The extension exports the contacts WhatsApp Web knows about: people who use WhatsApp and are saved in your address book. People without WhatsApp, and details such as email addresses or second numbers, aren't in WhatsApp, so they can't be exported. You can also include numbers you never saved with the "include unsaved contacts" option.</p></div>
         </details>
         <details class="reveal">
-          <summary>"Kişi verisi bulunamadı" hatası alıyorum.<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Önce sayfayı yenileyip sohbetlerin tamamen yüklenmesini bekle. Devam ederse WhatsApp Web iç yapısını değiştirmiş olabilir. Hata ekranındaki "Teknik ayrıntı" metnini <a href="https://github.com/egejpg/contact-exporter-wa-web/issues">GitHub'da</a> ya da <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg" data-s="Contact Exporter hatası">e-postayla</a> gönderirsen düzeltirim.</p></div>
+          <summary>Is it safe for my WhatsApp account?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>The extension sends nothing to WhatsApp, sends no messages and automates nothing. It only reads the contact list that WhatsApp Web already stores in your browser.</p></div>
         </details>
         <details class="reveal">
-          <summary>Ücretli mi?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-          <div class="answer"><p>Hayır. Ücretsiz, reklamsız ve MIT lisanslı açık kaynak.</p></div>
+          <summary>Is the interface available in English?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>Not yet; the extension's interface is currently in Turkish. It has just one screen: tick the contacts you want, then press the button on the right for VCF or the one on the left for CSV.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>I get a "Kişi verisi bulunamadı" (no contact data) error.<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>Reload the page first and wait until your chats have fully loaded. If it keeps happening, WhatsApp Web may have changed its internals. Send me the "Teknik ayrıntı" (technical details) text from the error screen <a href="https://github.com/egejpg/contact-exporter-wa-web/issues">on GitHub</a> or <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg" data-s="Contact Exporter error">by email</a> and I'll fix it.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>Does it cost anything?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>No. It's free, ad-free and open source under the MIT license.</p></div>
         </details>
       </div>
     </section>
@@ -232,33 +243,33 @@
     <section class="container">
       <div class="band reveal">
         <div>
-          <h2>Rehberini geri almaya hazır mısın?</h2>
-          <p>Kur, WhatsApp Web'i aç, tıkla. Gerisi bir dosya kadar uzakta.</p>
+          <h2>Ready to get your contacts back?</h2>
+          <p>Install it, open WhatsApp Web, click. Everything else is one file away.</p>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/egejpg/contact-exporter-wa-web#kurulum">GitHub'dan kur</a>
-          <a class="btn btn-ghost" href="/contact-exporter/privacy/">Gizlilik politikası</a>
+          <a class="btn btn-primary" href="https://github.com/egejpg/contact-exporter-wa-web#kurulum">Install from GitHub</a>
+          <a class="btn btn-ghost" href="/contact-exporter/privacy/">Privacy policy</a>
         </div>
       </div>
-      <p class="disclaimer">Contact Exporter for WA Web, WhatsApp LLC veya Meta Platforms ile bağlantılı değildir.</p>
+      <p class="disclaimer">Contact Exporter for WA Web is not affiliated with WhatsApp LLC or Meta Platforms.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <a class="wordmark" href="/" aria-label="egejpg ana sayfa">
+      <a class="wordmark" href="/" aria-label="egejpg home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0b8457"/><path d="M9.5 16h13a6.5 6.5 0 1 0-1.9 4.6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="4.5" width="4.5" height="4.5" rx="1.2" fill="#d4f46a"/></svg>
         <span class="wm">ege<b>jpg</b></span>
       </a>
-      <nav class="foot-links" aria-label="Alt menü">
+      <nav class="foot-links" aria-label="Footer menu">
         <a href="/contact-exporter/">Contact Exporter</a>
-        <a href="/contact-exporter/privacy/">Gizlilik</a>
+        <a href="/contact-exporter/privacy/">Privacy</a>
         <a href="https://github.com/egejpg">GitHub</a>
-        <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg">E-posta</a>
+        <a href="#" data-mail data-u="76lugreege" data-d="moc.liamg">Email</a>
       </nav>
       <div class="foot-note">
         <span>© <span data-year>2026</span> egejpg</span>
-        <span class="leaf">Bu site çerez kullanmaz, ziyaretçi takibi yapmaz.</span>
+        <span class="leaf">This site uses no cookies and doesn't track visitors.</span>
       </div>
     </div>
   </footer>
