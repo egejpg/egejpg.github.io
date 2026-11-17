@@ -14,6 +14,15 @@
     onScroll();
   }
 
+  // ---------- E-posta (bot koruması) ----------
+  // Adres HTML'de ters çevrilmiş iki parça olarak durur; bağlantı burada kurulur.
+  const rev = (s) => [...(s || '')].reverse().join('');
+  document.querySelectorAll('[data-mail]').forEach((a) => {
+    const addr = `${rev(a.dataset.u)}@${rev(a.dataset.d)}`;
+    a.href = `mailto:${addr}${a.dataset.s ? '?subject=' + encodeURIComponent(a.dataset.s) : ''}`;
+    if (a.hasAttribute('data-show')) a.textContent = addr;
+  });
+
   // ---------- Yıl ----------
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
