@@ -49,6 +49,6 @@ npx serve .        # ya da: python -m http.server
 3. `sitemap.xml`'e yeni adresleri (iki dil) ve alt bilgiye bağlantıyı ekle.
 4. Eklentinin `manifest.json` dosyasına `"homepage_url"` olarak İngilizce sayfayı koy.
 
-## Mağaza bağlantısı yayınlanınca
+## Mağaza bağlantısı
 
-`contact-exporter/index.html` ve `tr/contact-exporter/index.html` içinde "Coming soon / yakında" yazan `span`'i, hemen üstündeki yorumdaki gibi mağaza bağlantılı bir düğmeyle değiştir.
+Contact Exporter: https://chromewebstore.google.com/detail/contact-exporter-for-wa-w/eaipkkaokidhcalpnlhmmnicjgnggjmp
