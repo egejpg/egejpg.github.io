@@ -16,7 +16,7 @@
   <meta property="og:title" content="Contact Exporter for WA Web">
   <meta property="og:description" content="Get your old address book back in one click. Export WhatsApp Web contacts to VCF and CSV. Your data never leaves your computer.">
   <meta property="og:url" content="https://egejpg.github.io/contact-exporter/">
-  <meta property="og:image" content="https://egejpg.github.io/assets/img/contact-exporter/ana.png">
+  <meta property="og:image" content="https://egejpg.github.io/assets/img/contact-exporter/en/main.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/jakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -140,13 +140,13 @@
       <div id="shots" class="stage shots-stage carousel" data-carousel data-parallax tabindex="0">
         <div class="carousel-track">
           <figure class="slide" style="margin:0" data-title="Move to your phone" data-caption="<b>VCF:</b> one file adds every contact to your Android or iPhone.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/telefon.png" alt="The extension's contact list next to a phone showing 96 contacts imported" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/en/phone.png" alt="The extension's contact list next to a phone showing 96 contacts imported" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
           <figure class="slide" style="margin:0" data-title="Excel" data-caption="<b>CSV:</b> columns split correctly in Excel and phone numbers stay intact.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/excel.png" alt="Contact list opened in Excel with name and phone columns" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/en/excel.png" alt="Contact list opened in Excel with name and phone columns" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
           <figure class="slide" style="margin:0" data-title="Privacy" data-caption="<b>Local:</b> no servers, no accounts, no tracking.">
-            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/gizlilik.png" alt="Three cards explaining that data never leaves the computer" width="1280" height="800" loading="lazy" draggable="false"></div></div>
+            <div class="slide-float"><div class="slide-card"><img class="shot" src="/assets/img/contact-exporter/en/privacy.png" alt="Three cards explaining that data never leaves the computer" width="1280" height="800" loading="lazy" draggable="false"></div></div>
           </figure>
         </div>
       </div>
@@ -228,6 +228,10 @@
         <details class="reveal">
           <summary>Which languages does it support?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
           <div class="answer"><p>English and Turkish. It opens in Turkish if your Chrome is set to Turkish and in English otherwise. Country names and CSV column headers follow the same language.</p></div>
+        </details>
+        <details class="reveal">
+          <summary>It stays on "Reading contacts…" for a long time.<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <div class="answer"><p>While WhatsApp Web syncs your chats (especially right after Chrome starts) it keeps writing to its own storage, and the extension has to wait its turn to read the contact list. Give WhatsApp Web a few seconds to finish loading. If it takes longer than 20 seconds, the extension tells you and offers a "Try again" button; reloading the WhatsApp Web tab usually helps.</p></div>
         </details>
         <details class="reveal">
           <summary>I get a "No contact data found" error.<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
